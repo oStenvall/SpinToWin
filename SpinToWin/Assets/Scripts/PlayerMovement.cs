@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -11,53 +12,46 @@ public class PlayerMovement : MonoBehaviour
     public Transform feet;
     public Transform player;
     public Transform playerCamera;
-    public Transform spawnPoint;
     public LayerMask groundLayers;
 
+    public Animator anim;
+
+    [HideInInspector] public bool isFacingRight = true;
 
     Vector2 gravity;
     float movementX;
-    bool alive; 
     //float movementY;
 
     // 0 = UP, 1 = RIGHT, 2 = DOWN, 3 = LEFT 
     public int gravityDirection;
 
-    private GameHandler ;
+    private LevelHandler levelHandler;
 
     void Awake()
     {
-        alive = true;
-        gameHandler = GameObject.FindObjectOfType<GameHandler>();
+        levelHandler = GameObject.FindObjectOfType<LevelHandler>();
     }
-
-
 
     private void Update(){
-        if (alive)
+        movementX = Input.GetAxisRaw("Horizontal");
+        //movementY = Input.GetAxisRaw("Vertical");
+        playerCamera.position = new Vector3(player.position.x, player.position.y, -10);
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            movementX = Input.GetAxisRaw("Horizontal");
-            //movementY = Input.GetAxisRaw("Vertical");
-            playerCamera.position = new Vector3(player.position.x, player.position.y, -10);
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                RotatePlayer("E");
-            }
-            else if (Input.GetKeyDown(KeyCode.Q))
-            {
-                RotatePlayer("Q");
-            }
-            if (Input.GetButtonDown("Jump") && IsGrounded())
-            {
-                Jump();
-            }
-            RotateCamera();
-        } else
-        {
-            player.position = spawnPoint.position;
-            playerCamera.position = spawnPoint.position;
+            RotatePlayer("E");
         }
+        else if (Input.GetKeyDown(KeyCode.Q))
+        {
+            RotatePlayer("Q");
+        }
+        if (Input.GetButtonDown("Jump") && IsGrounded())
+        {
+            Jump();
+        }
+        RotateCamera();
+         
     }
+
 
     private void FixedUpdate()
     {
@@ -167,7 +161,7 @@ public class PlayerMovement : MonoBehaviour
             player.Rotate(new Vector3(0, 0, -90));
             setGravity();
         }
-        gameHandler.UpdatePlayerRotation(player.rotation);
+        levelHandler.UpdatePlayerRotation(player.rotation);
     }
 
     void RotateCamera()
@@ -176,6 +170,33 @@ public class PlayerMovement : MonoBehaviour
         Quaternion cameraRotation = playerCamera.transform.rotation;
         playerCamera.rotation = Quaternion.Slerp(cameraRotation, playerRotation, 5f * Time.deltaTime);
         
+    }
+
+    public void ResetRotations()
+    {
+        player.transform.rotation = new Quaternion(0, 0, 0,0);
+        playerCamera.transform.rotation = new Quaternion(0, 0, 0,0);
+        gravityDirection = 0;
+        setGravity();
+    }
+
+
+    private void setAnimationVariables()
+    {
+        if (IsGrounded())
+        {
+            anim.SetBool("IsGround", true);
+        } else
+        {
+            anim.SetBool("IsGround", false);
+        }
+        if(Math.Abs(rb.velocity.x) > 0.5)
+        {
+            anim.SetBool("IsRunning", true);
+        }else
+        {
+            anim.SetBool("IsRunning", false);
+        }
     }
 
 };

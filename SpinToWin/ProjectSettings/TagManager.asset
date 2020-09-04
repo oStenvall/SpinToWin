@@ -5,10 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
-  - Platform
   - SolidPlatform
   - Spinning Platform
   - Death
+  - projectile
   layers:
   - Default
   - TransparentFX
@@ -51,6 +51,9 @@ TagManager:
     locked: 0
   - name: GameObject
     uniqueID: 1732659015
+    locked: 0
+  - name: Projectile
+    uniqueID: 2567279339
     locked: 0
   - name: Player
     uniqueID: 3499028991
