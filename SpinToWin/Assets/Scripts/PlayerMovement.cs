@@ -11,23 +11,51 @@ public class PlayerMovement : MonoBehaviour
     public Transform feet;
     public Transform player;
     public Transform playerCamera;
+    public Transform spawnPoint;
     public LayerMask groundLayers;
 
 
     Vector2 gravity;
     float movementX;
+    bool alive; 
     //float movementY;
 
     // 0 = UP, 1 = RIGHT, 2 = DOWN, 3 = LEFT 
-    private int gravityDirection;
+    public int gravityDirection;
+
+    private GameHandler ;
+
+    void Awake()
+    {
+        alive = true;
+        gameHandler = GameObject.FindObjectOfType<GameHandler>();
+    }
+
+
 
     private void Update(){
-        movementX = Input.GetAxisRaw("Horizontal");
-        //movementY = Input.GetAxisRaw("Vertical");
-        playerCamera.position = new Vector3(player.position.x, player.position.y, -10);
-        RotateGravity();
-        if (Input.GetButtonDown("Jump") && IsGrounded()){
-            Jump();
+        if (alive)
+        {
+            movementX = Input.GetAxisRaw("Horizontal");
+            //movementY = Input.GetAxisRaw("Vertical");
+            playerCamera.position = new Vector3(player.position.x, player.position.y, -10);
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                RotatePlayer("E");
+            }
+            else if (Input.GetKeyDown(KeyCode.Q))
+            {
+                RotatePlayer("Q");
+            }
+            if (Input.GetButtonDown("Jump") && IsGrounded())
+            {
+                Jump();
+            }
+            RotateCamera();
+        } else
+        {
+            player.position = spawnPoint.position;
+            playerCamera.position = spawnPoint.position;
         }
     }
 
@@ -110,10 +138,10 @@ public class PlayerMovement : MonoBehaviour
         Physics2D.gravity = gravity;
     }
 
-    void RotateGravity()
+    void RotatePlayer(string buttonPressed)
     {
 
-        if (Input.GetKeyUp(KeyCode.E))
+        if (buttonPressed == "E")
         {
             if (gravityDirection < 3)
             {
@@ -126,7 +154,7 @@ public class PlayerMovement : MonoBehaviour
             player.Rotate(new Vector3(0, 0, 90));
             setGravity();
         }
-        else if (Input.GetKeyUp(KeyCode.Q))
+        else if (buttonPressed == "Q")
         {
             if (gravityDirection > 0)
             {
@@ -139,7 +167,15 @@ public class PlayerMovement : MonoBehaviour
             player.Rotate(new Vector3(0, 0, -90));
             setGravity();
         }
-        playerCamera.eulerAngles = Vector3.SlerpUnclamped(playerCamera.eulerAngles, player.eulerAngles, 3f * Time.deltaTime);
+        gameHandler.UpdatePlayerRotation(player.rotation);
+    }
+
+    void RotateCamera()
+    {
+        Quaternion playerRotation = player.transform.rotation;
+        Quaternion cameraRotation = playerCamera.transform.rotation;
+        playerCamera.rotation = Quaternion.Slerp(cameraRotation, playerRotation, 5f * Time.deltaTime);
+        
     }
 
 };
