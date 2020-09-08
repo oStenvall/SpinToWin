@@ -16,14 +16,21 @@ public class ShootController : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetMouseButtonDown(0) && timeUntilFure < Time.time)
+
+        if (Input.GetMouseButtonDown(0) && timeUntilFure < Time.time)
         {
-            Shoot();
-            timeUntilFure = Time.time + fireRate;
+            PlayerInventory pi = gameObject.GetComponent<PlayerInventory>();
+            if (pi.ammo > 0)
+            {
+                pi.ammo--;
+                ShootDistanceDriver();
+                timeUntilFure = Time.time + fireRate;
+            }
+
         }
     }
 
-    void Shoot()
+    void ShootDistanceDriver()
     {
         float angle = pm.isFacingLeft ? 180f : 0f;
         Debug.Log(angle);

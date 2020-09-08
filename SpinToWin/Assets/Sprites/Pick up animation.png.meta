@@ -1,0 +1,455 @@
+fileFormatVersion: 2
+guid: aa68ab9723e95e941ba37f08b2956fcc
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3639813490322156122
+    second: Pick up animation_0
+  - first:
+      213: 1951611721538181390
+    second: Pick up animation_1
+  - first:
+      213: 4166484592157728381
+    second: Pick up animation_2
+  - first:
+      213: -6431987469204295692
+    second: Pick up animation_3
+  - first:
+      213: -5174152850918438548
+    second: Pick up animation_4
+  - first:
+      213: -3098588515885361552
+    second: Pick up animation_5
+  - first:
+      213: 730870161606290386
+    second: Pick up animation_6
+  - first:
+      213: 5996526883486660809
+    second: Pick up animation_7
+  - first:
+      213: 6396175903701198405
+    second: Pick up animation_8
+  - first:
+      213: -2175470929937929907
+    second: Pick up animation_9
+  - first:
+      213: -330395813797387393
+    second: Pick up animation_10
+  - first:
+      213: -1618965787842242749
+    second: Pick up animation_11
+  - first:
+      213: 4950792840688997278
+    second: Pick up animation_12
+  - first:
+      213: 5491039381418207602
+    second: Pick up animation_13
+  - first:
+      213: 8118233830238870000
+    second: Pick up animation_14
+  - first:
+      213: -6024330179103969848
+    second: Pick up animation_15
+  - first:
+      213: 511659737299492089
+    second: Pick up animation_16
+  - first:
+      213: -3196573065309811869
+    second: Pick up animation_17
+  - first:
+      213: -4415644495998478341
+    second: Pick up animation_0
+  - first:
+      213: -2222218798734962220
+    second: Pick up animation_1
+  - first:
+      213: -8574671531733994695
+    second: Pick up animation_2
+  - first:
+      213: 2126036710001508611
+    second: Pick up animation_3
+  - first:
+      213: -3160408985331006849
+    second: Pick up animation_4
+  - first:
+      213: -3285369774382146921
+    second: Pick up animation_5
+  - first:
+      213: -3352148384767930965
+    second: Pick up animation_6
+  - first:
+      213: 5874377247377107125
+    second: Pick up animation_7
+  - first:
+      213: 5875890561225223749
+    second: Pick up animation_8
+  - first:
+      213: 3178727674366467568
+    second: Pick up animation_9
+  - first:
+      213: 7484228278413146514
+    second: Pick up animation_10
+  - first:
+      213: 1559686748923742638
+    second: Pick up animation_11
+  - first:
+      213: -56742878113883207
+    second: Pick up animation_12
+  - first:
+      213: 8054788829188060436
+    second: Pick up animation_13
+  - first:
+      213: 2980780413778869185
+    second: Pick up animation_14
+  - first:
+      213: 6211458629400981037
+    second: Pick up animation_15
+  - first:
+      213: -2948675670607738099
+    second: Pick up animation_16
+  - first:
+      213: 1476083377677697367
+    second: Pick up animation_17
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Pick up animation_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 303
+        width: 93
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf71a99d9ba78b2c0800000000000000
+      internalID: -4415644495998478341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick up animation_1
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 304
+        width: 93
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d11530c6c71921e0800000000000000
+      internalID: -2222218798734962220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick up animation_2
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 304
+        width: 93
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93337552ca5a00980800000000000000
+      internalID: -8574671531733994695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick up animation_3
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 230
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 301841f9f13318d10800000000000000
+      internalID: 2126036710001508611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick up animation_4
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 230
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f72846cb5c8f324d0800000000000000
+      internalID: -3160408985331006849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick up animation_5
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 230
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79a952ac8950862d0800000000000000
+      internalID: -3285369774382146921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick up animation_6
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 130
+        width: 39
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bad0283fdc6ca71d0800000000000000
+      internalID: -3352148384767930965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick up animation_7
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 132
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b8ac829bfaf58150800000000000000
+      internalID: 5874377247377107125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick up animation_9
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 130
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fd115c6afb1d1c20800000000000000
+      internalID: 3178727674366467568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick up animation_11
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 32
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea9cb76a5de15a510800000000000000
+      internalID: 1559686748923742638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick up animation_13
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 32
+        width: 35
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 415f98893cb58cf60800000000000000
+      internalID: 8054788829188060436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -9,6 +9,7 @@ TagManager:
   - Spinning Platform
   - Death
   - projectile
+  - Panel
   layers:
   - Default
   - TransparentFX
@@ -57,4 +58,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 3499028991
+    locked: 0
+  - name: Inventory
+    uniqueID: 232363711
     locked: 0

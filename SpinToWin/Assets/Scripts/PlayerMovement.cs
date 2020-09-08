@@ -110,25 +110,15 @@ public class PlayerMovement : MonoBehaviour
     void setGravity()
     {
         if (gravityDirection == 0) {
-            Debug.Log("Gravity  DOWN = " + gravityDirection);
             gravity = new Vector2(0f, -12f);
             //rb.velocity = new Vector2(movementX * movementSpeed, 0);
         } else if (gravityDirection == 1)
         {
-            Debug.Log("Gravity  RIGHT = " + gravityDirection);
             gravity = new Vector2(12f, 0f);
-            //camera.Rotate(Vector3.forward, 10.0f * Time.deltaTime);
-            //rb.velocity = new Vector2(movementX * movementSpeed, 0);
         } else if (gravityDirection == 2) {
-            Debug.Log("Gravity  UP = " + gravityDirection);
             gravity = new Vector2(0f, 12f);
-            //camera.Rotate(Vector3.forward, 10.0f * Time.deltaTime);
-            // rb.velocity = new Vector2(movementX * movementSpeed, 0);
         } else if (gravityDirection == 3) {
-            Debug.Log("Gravity  LEFT = " + gravityDirection);
             gravity = new Vector2(-12f, 0f);
-            //camera.Rotate(Vector3.forward, 10.0f * Time.deltaTime);
-            // rb.velocity = new Vector2(movementX * movementSpeed, 0);
         }
         Physics2D.gravity = gravity;
     }
