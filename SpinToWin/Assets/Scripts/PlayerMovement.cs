@@ -16,14 +16,13 @@ public class PlayerMovement : MonoBehaviour
 
     public Animator anim;
 
-    [HideInInspector] public bool isFacingRight = true;
-
     Vector2 gravity;
     float movementX;
     //float movementY;
 
     // 0 = UP, 1 = RIGHT, 2 = DOWN, 3 = LEFT 
-    public int gravityDirection;
+    [HideInInspector] public int gravityDirection;
+    [HideInInspector] public bool isFacingLeft = true;
 
     private LevelHandler levelHandler;
 
@@ -72,6 +71,8 @@ public class PlayerMovement : MonoBehaviour
             movement = new Vector2(rb.velocity.x,- movementX * movementSpeed);
         }
         rb.velocity = movement;
+        setAnimationVariables();
+
     }
 
     void Jump() {
@@ -185,18 +186,29 @@ public class PlayerMovement : MonoBehaviour
     {
         if (IsGrounded())
         {
-            anim.SetBool("IsGround", true);
+            anim.SetBool("IsGrounded", true);
         } else
         {
-            anim.SetBool("IsGround", false);
+            anim.SetBool("IsGrounded", false);
         }
-        if(Math.Abs(rb.velocity.x) > 0.5)
+        if(Math.Abs(movementX) > 0.5)
         {
             anim.SetBool("IsRunning", true);
         }else
         {
             anim.SetBool("IsRunning", false);
         }
+        if(movementX < 0)
+        {
+            player.localScale = new Vector3(1f, 1f, 1f);
+            isFacingLeft = true;
+        } else if (movementX > 0)
+            {
+            isFacingLeft = false;
+            player.localScale = new Vector3(-1f, 1f, 1f);
+        }
     }
+
+  
 
 };

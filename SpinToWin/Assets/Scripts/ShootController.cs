@@ -8,4 +8,25 @@ public class ShootController : MonoBehaviour
 
     float timeUntilFure;
     PlayerMovement pm;
+
+    private void Start()
+    {
+        pm = gameObject.GetComponent<PlayerMovement>();
+    }
+
+    private void Update()
+    {
+        if(Input.GetMouseButtonDown(0) && timeUntilFure < Time.time)
+        {
+            Shoot();
+            timeUntilFure = Time.time + fireRate;
+        }
+    }
+
+    void Shoot()
+    {
+        float angle = pm.isFacingLeft ? 180f : 0f;
+        Debug.Log(angle);
+        Instantiate(bulletPrefab, firingPoint.position, Quaternion.Euler(new Vector3(0f, 0f, angle)));
+    }
 }

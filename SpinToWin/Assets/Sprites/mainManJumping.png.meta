@@ -4,28 +4,28 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -5196975586971159460
-    second: mainManJumping_0
+    second: jump_right_1
   - first:
       213: 2250869780222084269
-    second: mainManJumping_1
+    second: jump_right_2
   - first:
       213: 3626365408055809724
-    second: mainManJumping_2
+    second: jump_right_3
   - first:
       213: -1446493683687617870
-    second: mainManJumping_3
+    second: jump_right_4
   - first:
       213: -3975783091313648694
-    second: mainManJumping_4
+    second: jump_left_1
   - first:
       213: 6500856321806379216
-    second: mainManJumping_5
+    second: jump_left_2
   - first:
       213: 1093121835964392167
-    second: mainManJumping_6
+    second: jump_left_3
   - first:
       213: 106245344119985569
-    second: mainManJumping_7
+    second: jump_left_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -123,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mainManJumping_0
+      name: jump_right_1
       rect:
         serializedVersion: 2
         x: 27
@@ -131,7 +131,7 @@ TextureImporter:
         width: 45
         height: 92
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -144,7 +144,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mainManJumping_1
+      name: jump_right_2
       rect:
         serializedVersion: 2
         x: 127
@@ -152,7 +152,7 @@ TextureImporter:
         width: 45
         height: 89
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -165,7 +165,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mainManJumping_2
+      name: jump_right_3
       rect:
         serializedVersion: 2
         x: 227
@@ -173,7 +173,7 @@ TextureImporter:
         width: 45
         height: 92
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -186,7 +186,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mainManJumping_3
+      name: jump_right_4
       rect:
         serializedVersion: 2
         x: 322
@@ -194,7 +194,7 @@ TextureImporter:
         width: 56
         height: 77
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -207,7 +207,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mainManJumping_4
+      name: jump_left_1
       rect:
         serializedVersion: 2
         x: 28
@@ -215,7 +215,7 @@ TextureImporter:
         width: 45
         height: 92
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -228,7 +228,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mainManJumping_5
+      name: jump_left_2
       rect:
         serializedVersion: 2
         x: 128
@@ -236,7 +236,7 @@ TextureImporter:
         width: 45
         height: 89
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -249,7 +249,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mainManJumping_6
+      name: jump_left_3
       rect:
         serializedVersion: 2
         x: 228
@@ -257,7 +257,7 @@ TextureImporter:
         width: 45
         height: 92
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -270,7 +270,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mainManJumping_7
+      name: jump_left_4
       rect:
         serializedVersion: 2
         x: 322
@@ -278,7 +278,7 @@ TextureImporter:
         width: 56
         height: 77
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
