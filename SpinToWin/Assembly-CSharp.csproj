@@ -63,12 +63,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\RotatePlatformOnHit.cs" />
     <Compile Include="Assets\Scripts\LockPlayerCamera.cs" />
     <Compile Include="Assets\Scripts\Menu\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Menu\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\NonPlayerObjects\BasketAnimationFinished.cs" />
     <Compile Include="Assets\Scripts\NonPlayerObjects\BasketCollisionHandler.cs" />
+    <Compile Include="Assets\Scripts\NonPlayerObjects\BasketRotatePlatformOnHit.cs" />
     <Compile Include="Assets\Scripts\NonPlayerObjects\FinishLevel.cs" />
     <Compile Include="Assets\Scripts\NonPlayerObjects\SpikesHandler.cs" />
     <Compile Include="Assets\Scripts\Player\LevelHandler.cs" />
@@ -78,7 +78,6 @@
     <Compile Include="Assets\Scripts\Weapons\Projectile.cs" />
     <Compile Include="Assets\Scripts\Weapons\ProjectileNoGrav.cs" />
     <Compile Include="Assets\Scripts\Weapons\WeaponPickup.cs" />
-    <Compile Include="Assets\TriggerEffectOnHit.cs" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

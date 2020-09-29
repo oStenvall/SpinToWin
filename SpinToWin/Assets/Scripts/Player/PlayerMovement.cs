@@ -131,7 +131,7 @@ public class PlayerMovement : MonoBehaviour
     void RotatePlayer(string buttonPressed)
     {
 
-        if (buttonPressed == "E")
+        if (buttonPressed == "Q")
         {
             if (gravityDirection < 3)
             {
@@ -144,7 +144,7 @@ public class PlayerMovement : MonoBehaviour
             player.Rotate(new Vector3(0, 0, 90));
             setGravity();
         }
-        else if (buttonPressed == "Q")
+        else if (buttonPressed == "E")
         {
             if (gravityDirection > 0)
             {
@@ -157,7 +157,10 @@ public class PlayerMovement : MonoBehaviour
             player.Rotate(new Vector3(0, 0, -90));
             setGravity();
         }
-        levelHandler.UpdatePlayerRotation(player.rotation);
+        if(levelHandler != null)
+        {
+            levelHandler.UpdatePlayerRotation(player.rotation);
+        }
     }
 
     
@@ -175,7 +178,10 @@ public class PlayerMovement : MonoBehaviour
         player.transform.rotation = new Quaternion(0, 0, 0,0);
         playerCamera.transform.rotation = new Quaternion(0, 0, 0,0);
         gravityDirection = 0;
-        levelHandler.UpdatePlayerRotation(player.rotation);
+        if(levelHandler != null)
+        {
+            levelHandler.UpdatePlayerRotation(player.rotation);
+        }
         setGravity();
     }
 

@@ -7,12 +7,13 @@ public class SpikesHandler : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player"))
         {
-            PlayerDied();
+            PlayerDied(col.gameObject);
         }
     }
 
-    void PlayerDied()
+    void PlayerDied(GameObject Player)
     {
+        Player.GetComponent<PlayerMovement>().ResetRotations();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
