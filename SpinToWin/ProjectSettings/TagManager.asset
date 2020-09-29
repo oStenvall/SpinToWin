@@ -10,6 +10,14 @@ TagManager:
   - Death
   - projectile
   - Panel
+  - Button
+  - Bullet
+  - WeaponNoGrav
+  - GravityDisc
+  - Driver
+  - DriverBullet
+  - GravityAmmo
+  - DriverAmmo
   layers:
   - Default
   - TransparentFX
