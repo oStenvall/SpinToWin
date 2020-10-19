@@ -27,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector] public bool isFacingLeft = true;
 
     private LevelHandler levelHandler;
+    private bool gravityChangeAvailable = true;
 
     void Awake()
     {
@@ -106,60 +107,80 @@ public class PlayerMovement : MonoBehaviour
         Collider2D groundCheck = Physics2D.OverlapCircle(feet.position, 0.5f,groundLayers);
 
         if (groundCheck != null) {
-            return true;
+            gravityChangeAvailable = true;
+            return true;       
         }
         
 	return false;
     }
 
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "TurnOffGrav")
+        {
+            ResetRotations();
+            AllowGravityChange = false;
+        }
+        else if(other.gameObject.tag == "TurnOnGrav")
+        {
+            AllowGravityChange = true;
+        }
+    }
+
     void setGravity()
     {
-        if (gravityDirection == 0) {
-            gravity = new Vector2(0f, -12f);
-            //rb.velocity = new Vector2(movementX * movementSpeed, 0);
-        } else if (gravityDirection == 1)
-        {
-            gravity = new Vector2(12f, 0f);
-        } else if (gravityDirection == 2) {
-            gravity = new Vector2(0f, 12f);
-        } else if (gravityDirection == 3) {
-            gravity = new Vector2(-12f, 0f);
-        }
-        Physics2D.gravity = gravity;
+
+            if (gravityDirection == 0) {
+                gravity = new Vector2(0f, -12f);
+                //rb.velocity = new Vector2(movementX * movementSpeed, 0);
+            } else if (gravityDirection == 1)
+            {
+                gravity = new Vector2(12f, 0f);
+            } else if (gravityDirection == 2) {
+                gravity = new Vector2(0f, 12f);
+            } else if (gravityDirection == 3) {
+                gravity = new Vector2(-12f, 0f);
+            }
+            Physics2D.gravity = gravity;
+        
     }
 
     void RotatePlayer(string buttonPressed)
     {
 
-        if (buttonPressed == "Q")
+        if (gravityChangeAvailable)
         {
-            if (gravityDirection < 3)
-            {
-                gravityDirection += 1;
+            if (buttonPressed == "E") {
+                gravityChangeAvailable = false;
+                if (gravityDirection < 3)
+                {
+                    gravityDirection += 1;
+                }
+                else
+                {
+                    gravityDirection = 0;
+                }
+                player.Rotate(new Vector3(0, 0, 90));
+                setGravity();
             }
-            else
+            else if (buttonPressed == "Q")
             {
-                gravityDirection = 0;
+                gravityChangeAvailable = false;
+                if (gravityDirection > 0)
+                {
+                    gravityDirection -= 1;
+                }
+                else
+                {
+                    gravityDirection = 3;
+                }
+                player.Rotate(new Vector3(0, 0, -90));
+                setGravity();
             }
-            player.Rotate(new Vector3(0, 0, 90));
-            setGravity();
-        }
-        else if (buttonPressed == "E")
-        {
-            if (gravityDirection > 0)
+            if (levelHandler != null)
             {
-                gravityDirection -= 1;
+                levelHandler.UpdatePlayerRotation(player.rotation);
             }
-            else
-            {
-                gravityDirection = 3;
-            }
-            player.Rotate(new Vector3(0, 0, -90));
-            setGravity();
-        }
-        if(levelHandler != null)
-        {
-            levelHandler.UpdatePlayerRotation(player.rotation);
         }
     }
 

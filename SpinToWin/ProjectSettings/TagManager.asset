@@ -18,6 +18,8 @@ TagManager:
   - DriverBullet
   - GravityAmmo
   - DriverAmmo
+  - TurnOffGrav
+  - TurnOnGrav
   layers:
   - Default
   - TransparentFX
